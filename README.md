@@ -53,4 +53,13 @@ input layer에 더 큰 image를 넣으면 성능이 높아진다.
 224 x 224 크기의 image보다 331 x 331 크기의 image가 더 좋은 성능을 내고, 점점 크기가 클 수록 성능이 좋아지지만, 이것도 saturate되는 문제가 있다.   
    
 이를 종합해보자면, depth / width / resolution 을 키우면 키울수록 성능이 높아지지만 얻을 수 있는 이득은 적어진다.   
-
+   
+## 3. Compound Scaling   
+   
+![compounding_scale](https://user-images.githubusercontent.com/59756209/74716009-111b3800-5271-11ea-8a2e-abe709ac5d3b.PNG)   
+   
+depth와 resolution을 고정한 채로 width 값을 변화시키면서 테스트   
+이 떄 다양한 크기의 depth과 resolution을 테스트   
+동일한 FLOPS에서 width, depth, resolution 조합에 따라 다양한 성능의 차이를 보인다.   
+최고의 정확도를 갖기 위한 가장 최적의 width, depth, resolution 조합을 찾아낸다.   
+기존의 수동적으로 찾는 작업의 연구가 아닌 새로운 방식인 compound scaling method 방식을 제안한다.   
