@@ -78,3 +78,12 @@ base 모델이 어떤 모델이냐에 따라 기본 성능 차이가 많이 발�
 moblie-size baseline인 EfficientNet을 AutoML을 통해 구축한다.   
 이 때, 사용한 AutoML 방식은 multi-objective neural architecture search를 사용하여 accuracy와 FLOPS 모두를 opimize하는 network를 찾도록 했다.   
    
+![effe_b0](https://user-images.githubusercontent.com/59756209/74720918-e71a4380-5279-11ea-847d-97ee2033d093.PNG)   
+   
+EfficientNet-B0을 base의 시작으로 다음 순서에 따라 scale을 확장한다.   
+1. 파이 = 1로 고정한 뒤 grid search를 수행하여 a, b, r 값을 찾는다.   
+2. EfficientNet-B0에 대해 논문에서 찾은 값은 a = 1.2, b = 1.1, r = 1.15   
+3. 이값은 a*(b**2)*(r**2) = 2를 만족한다.   
+4. a, b, r 값을 고정한 뒤 서로 다른 파이 값을 조절한다.   
+5. 이렇게 얻어진 결과가 EfficientNet-B1 ~ B7까지이다.   
+
