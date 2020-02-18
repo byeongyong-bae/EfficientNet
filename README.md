@@ -89,3 +89,11 @@ EfficientNet-B0을 base의 시작으로 다음 순서에 따라 scale을 확장�
    
 ![b0_b7](https://user-images.githubusercontent.com/59756209/74721325-8b9c8580-527a-11ea-90c7-015440bf38fb.PNG)   
    
+## 5. 다른 network에 적용   
+   
+![resnet_expe](https://user-images.githubusercontent.com/59756209/74722000-8d1a7d80-527b-11ea-85bd-a939f6137cfe.PNG)   
+   
+EfficientNet의 compound scale 방법이 타당한지 확인하기 위해 MobileNet과 ResNet에 적용하여 scale-up   
+단순히 scale을 독립적으로 증가시키는 것보다 compound scale에서 얻어지 결과로 scale-up하는 것이 효과가 더 좋다.   
+다른 Network와 transfer learning의 결과들이 다 compound scale한 방법이 성능이 더 좋았다.
+
