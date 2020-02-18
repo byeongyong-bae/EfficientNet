@@ -31,5 +31,26 @@ N : 여러개의 F(연산자)들이 모인 layer 결합체
 하지만, 기존에는 각각에 대해서만 변화를 가하는 작업들을 진행하였다.   
    
 ### (1) depth   
+   
+![depth](https://user-images.githubusercontent.com/59756209/74713285-a87d8c80-526b-11ea-90df-f156ac6d5d88.PNG)   
+   
+가장 흔한 scale-up 방법으로 depth의 수가 증가할수록 성능이 높아진다.   
+하지만, depth 수가 계속 증가하는 것은 오히려 성능이 감소된다.   
 
-  
+### (2) width   
+
+![width](https://user-images.githubusercontent.com/59756209/74713312-b7fcd580-526b-11ea-928f-47fb3ab90dfc.PNG)   
+
+width를 넓게 할수록 미세한 정보들을 더 많이 담을 수 있다.   
+그러므로 width가 넓어질수록 성능이 높아진다.   
+하지만, widht 수가 증가할수록 saturate되는 문제가 있다.   
+
+### (3) resolution   
+
+![width](https://user-images.githubusercontent.com/59756209/74713312-b7fcd580-526b-11ea-928f-47fb3ab90dfc.PNG)   
+   
+input layer에 더 큰 image를 넣으면 성능이 높아진다.   
+224 x 224 크기의 image보다 331 x 331 크기의 image가 더 좋은 성능을 내고, 점점 크기가 클 수록 성능이 좋아지지만, 이것도 saturate되는 문제가 있다.   
+   
+이를 종합해보자면, depth / width / resolution 을 키우면 키울수록 성능이 높아지지만 얻을 수 있는 이득은 적어진다.   
+
