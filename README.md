@@ -13,4 +13,5 @@ ResNet은 ResNet-18 부터 ResNet-200까지 신경망의 depth를 늘려 성능�
 1. 신경망의 depth를 늘리기   
 2. channel width를 늘리기   
 3. input image의 resolution을 올리기   
+   
 EfficientNet은 세가지의 방벙을 fixed sclaing coefficients
