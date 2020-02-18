@@ -47,7 +47,7 @@ width를 넓게 할수록 미세한 정보들을 더 많이 담을 수 있다.
 
 ### (3) resolution   
 
-![width](https://user-images.githubusercontent.com/59756209/74713312-b7fcd580-526b-11ea-928f-47fb3ab90dfc.PNG)   
+![resolution](https://user-images.githubusercontent.com/59756209/74713980-f5159780-526c-11ea-9ee8-ff4e66950eb4.PNG)      
    
 input layer에 더 큰 image를 넣으면 성능이 높아진다.   
 224 x 224 크기의 image보다 331 x 331 크기의 image가 더 좋은 성능을 내고, 점점 크기가 클 수록 성능이 좋아지지만, 이것도 saturate되는 문제가 있다.   
