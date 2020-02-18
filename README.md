@@ -16,3 +16,14 @@ ResNet은 ResNet-18 부터 ResNet-200까지 신경망의 depth를 늘려 성능�
    
 EfficientNet은 세가지의 방법을 fixed sclaing coefficients을 이용하여 최적의 조합을 찾는 기법이다.   
 
+## 2.   
+   
+![eff_layer](https://user-images.githubusercontent.com/59756209/74712539-e5488400-5269-11ea-9145-7d710155afb2.PNG)   
+   
+F : 연산자   
+X : input tensor   
+Y : output tensor   
+N : 여러개의 F(연산자)들이 모인 layer 결합체   
+
+  
+  
