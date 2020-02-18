@@ -21,7 +21,7 @@ EfficientNet은 세가지의 방법을 fixed sclaing coefficients을 이용하�
 ![eff_layer](https://user-images.githubusercontent.com/59756209/74712539-e5488400-5269-11ea-9145-7d710155afb2.PNG)   
    
 F : 연산자   
-X : input tensor, X의 size는 <H, W, C>
+X : input tensor, X의 size는 <H, W, C>   
 Y : output tensor   
 N : 여러개의 F(연산자)들이 모인 layer 결합체   
 일부 신경망들은 전체 layer를 몇개의 stage로 나눌 수 있다.   
@@ -63,3 +63,13 @@ depth와 resolution을 고정한 채로 width 값을 변화시키면서 테스�
 동일한 FLOPS에서 width, depth, resolution 조합에 따라 다양한 성능의 차이를 보인다.   
 최고의 정확도를 갖기 위한 가장 최적의 width, depth, resolution 조합을 찾아낸다.   
 기존의 수동적으로 찾는 작업의 연구가 아닌 새로운 방식인 compound scaling method 방식을 제안한다.   
+   
+![compound_scale](https://user-images.githubusercontent.com/59756209/74716369-bdf5b500-5271-11ea-90ef-577d84af7466.PNG)   
+   
+a, b, r은 상수이고 grid search를 이용하여 찾는다.   
+파이는 사용자가 제어할 수 있는 적당한 값을 넣는다.   
+depth는 2배가 되면 2배의 FLOPS가 되므로 제곱식 X   
+하지만, width와 resolution은 2배가 되면 4배의 FLOPS가 되기때문에 제곱식을 적용   
+최종적인 FLOPS는 (a, b**2, r**2)**파이 에 의해 결정된다.   
+   
+   
