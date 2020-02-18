@@ -75,6 +75,6 @@ depth는 2배가 되면 2배의 FLOPS가 되므로 제곱식 X
 ## 4. EfficientNet   
    
 base 모델이 어떤 모델이냐에 따라 기본 성능 차이가 많이 발생하므로 좋은 base 모델을 사용하는 것이 주용하다.   
-논문에서는 기존에 알려진 MNasNet을 base로 사용하였다.
-   
+moblie-size baseline인 EfficientNet을 AutoML을 통해 구축한다.   
+이 때, 사용한 AutoML 방식은 multi-objective neural architecture search를 사용하여 accuracy와 FLOPS 모두를 opimize하는 network를 찾도록 했다.   
    
