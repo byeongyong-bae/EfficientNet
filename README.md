@@ -72,4 +72,9 @@ depth는 2배가 되면 2배의 FLOPS가 되므로 제곱식 X
 하지만, width와 resolution은 2배가 되면 4배의 FLOPS가 되기때문에 제곱식을 적용   
 최종적인 FLOPS는 (a, b**2, r**2)**파이 에 의해 결정된다.   
    
+## 4. EfficientNet   
+   
+base 모델이 어떤 모델이냐에 따라 기본 성능 차이가 많이 발생하므로 좋은 base 모델을 사용하는 것이 주용하다.   
+논문에서는 기존에 알려진 MNasNet을 base로 사용하였다.
+   
    
