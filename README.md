@@ -14,4 +14,5 @@ ResNet은 ResNet-18 부터 ResNet-200까지 신경망의 depth를 늘려 성능�
 2. channel width를 늘리기   
 3. input image의 resolution을 올리기   
    
-EfficientNet은 세가지의 방벙을 fixed sclaing coefficients
+EfficientNet은 세가지의 방법을 fixed sclaing coefficients을 이용하여 최적의 조합을 찾는 기법이다.   
+
